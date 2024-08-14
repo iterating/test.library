@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+
+    <meta charset="utf-8" />
+    <title>My book library</title>
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <link
+      href="//fonts.googleapis.com/css?family=Raleway:400,300,600"
+      rel="stylesheet"
+      type="text/css"
+    />
+
+
+    <link rel="stylesheet" href="normalize-modern.css" />
+    <link rel="stylesheet" href="skeleton.css" />
+
+
+
+  </head>
+  <body>
+    <div class="container" style="margin-top: 10%;">
+      <h1> Book Tracking App </h1>
+    </div>
+    <div class="container">
+        <div class="row">
+        <form action="">
+          <div class="five columns">
+            <label for="name">Book</label>
+            <input type="text" class="u-full-width" id="name" />
+          </div>
+          <div class="five columns">
+            <label for="author">Author</label>
+            <input type="text" class="u-full-width" id="author" />
+          </div>
+          <div class="two columns">
+            <label for="status">Status</label>
+            <select name="status" id="status" class="u-full-width">
+              <option value="true">Read</option>
+              <option value="false">Not read</option>
+            </select>
+          </div>
+          <input type="submit" value="submit" class="button-primary" />
+        </form>
+      </div>
+      <div class="row">
+        <div class="twelve columns"></div>
+        <table class="twelve columns">
+          <tr>
+            <th>Name</th>
+            <th>Author</th>
+            <th>Read?</th>
+            <th></th>
+          </tr>
+          <tbody id="book-table-body"></tbody>
+        </table>
+      </div>
+
+      
+    </div>
+
+    <script src="library.js"></script>
+  </body>
+</html>
