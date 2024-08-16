@@ -1,61 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
 
-    <meta charset="utf-8" />
-    <title>My book library</title>
-    <meta name="description" content="" />
-    <meta name="author" content="" />
+<head>
+  <meta charset="utf-8" />
+  <title>Book Tracking App</title>
+  <meta name="author" content="Jonathan Young" />
+  <meta name="description" content="" />
+  <meta name="author" content="" />
 
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-
-    <link rel="stylesheet" href="modern-normalize.css" />
-    <link rel="stylesheet" href="skeleton.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
 
+  <!-- CSS -->
+  <link rel="stylesheet" href="modern-normalize.css" />
+  <link rel="stylesheet" href="skeleton.css" />
 
-  </head>
-  <body>
-    <div class="container">
-      <h1> Book Tracking App </h1>
-    </div>
-    <div class="container">
-        <div class="row">
-        <form action="">
-          <div class="five columns">
-            <label for="name">Book</label>
-            <input type="text" class="u-full-width" id="name" />
-          </div>
-          <div class="five columns">
-            <label for="author">Author</label>
-            <input type="text" class="u-full-width" id="author" />
-          </div>
-          <div class="two columns">
-            <label for="status">Status</label>
-            <select name="status" id="status" class="u-full-width">
-              <option value="true">Read</option>
-              <option value="false">Not read</option>
-            </select>
-          </div>
-          <input type="submit" value="submit" class="button-primary" />
-        </form>
-      </div>
+</head>
+<body>
+  <div class="container">
+    <h1> Book Tracking App </h1>
+  </div>
+  <div class="container">
       <div class="row">
-        <div class="twelve columns"></div>
-        <table class="twelve columns">
-          <tr>
-            <th>Name</th>
-            <th>Author</th>
-            <th>Read?</th>
-            <th></th>
-          </tr>
-          <tbody id="book-table-body"></tbody>
-        </table>
-      </div>
-
-
+      <form action="">
+        <div class="five columns">
+          <label for="name">Book</label>
+          <input type="text" class="u-full-width" id="name" />
+        </div>
+        <div class="five columns">
+          <label for="author">Author</label>
+          <input type="text" class="u-full-width" id="author" />
+        </div>
+        <div class="two columns">
+          <label for="status">Status</label>
+          <select name="status" id="status" class="u-full-width">
+            <option value="true">Read</option>
+            <option value="false">Not read</option>
+          </select>
+        </div>
+        <input type="submit" value="submit" class="button-primary" />
+      </form>
+    </div>
+    <div class="row">
+      <div class="twelve columns"></div>
+      <table class="twelve columns">
+        <tr>
+          <th>Name</th>
+          <th>Author</th>
+          <th>Read?</th>
+          <th></th>
+        </tr>
+        <tbody id="book-table-body"></tbody>
+      </table>
     </div>
 
-    <script src="library.js"></script>
-  </body>
+
+  </div>
+
+  <script src="library.js"></script>
+</body>
 </html>
