@@ -86,8 +86,8 @@ const displayBooks = () => {
   myLibrary.books.forEach((book) => {
     const showBook = `
       <tr>
-        <td>${book.name}</td>
-        <td>${book.author}</td>
+        <td style="text-align: center;">${book.name}</td>
+        <td style="text-align: center;">${book.author}</td>
         <td><button class="status-button">${book.status}</button></td>
         <td><button class="delete">delete</button></td>
       </tr>

@@ -5,58 +5,143 @@
   <meta charset="utf-8" />
   <title>Book Tracking App</title>
   <meta name="author" content="Jonathan Young" />
-  <meta name="description" content="" />
-  <meta name="author" content="" />
-
+  <meta name="description" content="A simple book tracking application" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
 
   <!-- CSS -->
   <link rel="stylesheet" href="modern-normalize.css" />
   <link rel="stylesheet" href="skeleton.css" />
 
+  <style>
+    /* Additional custom styles to match Calibre-like aesthetics */
+    body {
+      font-family: 'Georgia', serif;
+      background-color: #f4f4f4;
+      margin: 0;
+      padding: 0;
+    }
+
+    .container {
+      background-color: #ffffff;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      padding: 20px;
+      max-width: 800px;
+      margin: 20px auto;
+    }
+
+    h1 {
+      font-size: 2em;
+      margin-bottom: 20px;
+      color: #333;
+    }
+
+    label {
+      font-weight: bold;
+      color: #333;
+    }
+
+    input[type="text"], select {
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      padding: 8px;
+      width: 100%;
+    }
+
+    .button-primary {
+      background-color: #007bff;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      padding: 10px 15px;
+      cursor: pointer;
+      text-align: center;
+      text-decoration: none;
+    }
+
+    .button-primary:hover {
+      background-color: #0056b3;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 20px;
+    }
+
+    th, td {
+      border: 1px solid #ddd;
+      padding: 8px;
+      text-align: left;
+    }
+
+    th {
+      background-color: #f2f2f2;
+    }
+
+    p {
+      font-size: 0.9em;
+      color: #555;
+    }
+
+    p a {
+      color: #007bff;
+      text-decoration: none;
+    }
+
+    p a:hover {
+      text-decoration: underline;
+    }
+  </style>
 </head>
+
 <body>
   <div class="container">
-    <h1> Book Tracking App </h1>
-  </div>
-  <div class="container">
+    <h1>Book Tracking App</h1>
+
+    <form action="">
       <div class="row">
-      <form action="">
-        <div class="five columns">
+        <div class="six columns">
           <label for="name">Book</label>
-          <input type="text" class="u-full-width" id="name" />
+          <input type="text" id="name" />
         </div>
-        <div class="five columns">
+        <div class="six columns">
           <label for="author">Author</label>
-          <input type="text" class="u-full-width" id="author" />
+          <input type="text" id="author" />
         </div>
-        <div class="two columns">
+      </div>
+      <div class="row">
+        <div class="six columns">
           <label for="status">Status</label>
-          <select name="status" id="status" class="u-full-width">
+          <select name="status" id="status">
             <option value="true">Read</option>
             <option value="false">Not read</option>
           </select>
         </div>
-        <input type="submit" value="submit" class="button-primary" />
-      </form>
-    </div>
-    <div class="row">
-      <div class="twelve columns"></div>
-      <table class="twelve columns">
+        <div class="six columns">
+          <input type="submit" value="Submit" class="button-primary" />
+        </div>
+      </div>
+    </form>
+
+    <table>
+      <thead>
         <tr>
-          <th>Name</th>
+          <th >Name</th>
           <th>Author</th>
           <th>Read?</th>
           <th></th>
         </tr>
-        <tbody id="book-table-body"></tbody>
-      </table>
-    </div>
+      </thead>
+      <tbody id="book-table-body"></tbody>
+    </table>
 
-
+    <p style="text-align: center;">
+      Designed and built with ❤️ by <a href="https://iterating.github.io/cv/" target="_blank">Jonathan Young Design</a>
+    </p>
   </div>
 
   <script src="library.js"></script>
 </body>
+
 </html>
