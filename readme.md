@@ -6,6 +6,6 @@ This app tracks books you have read
 
 
 # Outcomes
-- Practiced encapsulating methods inside of classes for code organization 
+- Practiced use of object constructors for organization and good development pattern
 - Used HTML5 semantic elements for better structure and readability
 - Deepened knowledge of DOM manipulation, HTML structure, CSS styling, and JS functionalities
