@@ -1,4 +1,3 @@
-# readme
 # Book Tracking App
 This app tracks books you have read
 - Before adding a book, you can mark if it's already read or not
