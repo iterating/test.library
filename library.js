@@ -24,11 +24,11 @@ class Library {
   addBook(newBook) {
     if (!this.isInLibrary(newBook)) {
       this.books.push(newBook)
-    }
+    }// now a method of Library
   }
 
   removeBook(name) {
-    this.books = this.books.filter((book) => book.name !== name)
+    this.books = this.books.filter((book) => book.name !== name) // Array.filter method for books that are not the selected one and selects that as the same array. Removes books with duplicate names with one click
   }
 
   getBook(name) {
@@ -36,7 +36,7 @@ class Library {
   }
 
   isInLibrary(newBook) {
-    return this.books.some((book) => book.name === newBook.name)
+    return this.books.some((book) => book.name === newBook.name) 
   }
 }
 
@@ -81,19 +81,19 @@ const addBook = (e) => {
 // display books as table rows in the tablebody
 const displayBooks = () => {
   getLocal();
-  const $tableBody = document.querySelector("#book-table-body");
-  $tableBody.innerHTML = "";
-  myLibrary.books.forEach((book) => {
-    const showBook = `
-      <tr>
-        <td style="text-align: center;">${book.name}</td>
-        <td style="text-align: center;">${book.author}</td>
-        <td><button class="status-button">${book.status}</button></td>
-        <td><button class="delete">delete</button></td>
-      </tr>
-    `;
-    $tableBody.insertAdjacentHTML("beforeend", showBook);
-  });
+  const tableBody = document.querySelector("#book-table-body");
+  tableBody.innerHTML = "";
+    myLibrary.books.forEach((book) => {
+      const showBook = `
+        <tr>
+          <td style="text-align: center;">${book.name}</td>
+          <td style="text-align: center;">${book.author}</td>
+          <td><button class="status-button">${book.status}</button></td>
+          <td><button class="delete">delete</button></td>
+        </tr>
+        `;
+      tableBody.insertAdjacentHTML("beforeend", showBook);
+    });
 }
 
 
@@ -102,10 +102,10 @@ document.querySelector("form").addEventListener("submit", addBook);
 document.querySelector("table").addEventListener("click", (e) => {
   const selector = e.target.parentNode.parentNode.childNodes[1];
   if (e.target.innerHTML === "delete") { 
-    if (confirm(`Delete ${selector.innerText} from your library?`)) 
+    if (confirm(`Remove ${selector.innerText} from your library?`)) 
       myLibrary.removeBook(selector.innerText);
-      saveLocal();
-      displayBooks();
+    saveLocal();
+    displayBooks();
 
     }
   
