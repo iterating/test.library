@@ -69,8 +69,8 @@ const getBookFromInput = () => {
 }
 
 // encapsulating this per prototype pattern
-const addBook = (e) => {
-  e.preventDefault()
+const addBook = (event) => {
+  event.preventDefault() // Prevent form submission so it runs addBook instead
   const newBook = getBookFromInput()
   myLibrary.addBook(newBook)
   saveLocal()
